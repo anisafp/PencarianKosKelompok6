@@ -26,6 +26,9 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
     public static final int REQUEST_CODE_EDIT = 99;
     rivate static final int REQUEST_CODE_ADD = 88;
     ArrayList<Hotel> mList = new ArrayList<>();
+    boolean isFiltered;
+    ArrayList<Integer> mListMapFilter = new ArrayList<>();
+    String mQuery;
     HotelAdapter mAdapter;
     int itemPos;
 
@@ -63,13 +66,17 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         {
             Hotel hotel = (Hotel) data.getSerializableExtra(HOTEL);
             mList.add(hotel);
-            mAdapter.notifyDataSetChanged();
+            if (isFiltered) mListAll.add(hotel);
+            doFilter(mQuery);
+            //mAdapter.notifyDataSetChanged();
         }
         else if (requestCode == REQUEST_CODE_EDIT && resultCode == RESULT_OK)
         {
             Hotel hotel = (Hotel) data.getSerializableExtra(HOTEL);
             mList.remove(itemPos);
+            if (isFiltered) mListAll.remove(mListMapFilter.get(itemPos).intValue());
             mList.add(itemPos, hotel);
+            if (isFiltered) mListAll.add(mListMapFilter.get(itemPos), hotel);
             mAdapter.notifyDataSetChanged();
         }
     }
@@ -102,6 +109,61 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView)
+                MenuItemCompat.getActionView(searchItem);
+
+        searchView.setOnQueryTextListener(
+                new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        mQuery = newText.toLowerCase();
+                        doFilter(mQuery);
+                        return true;
+                    }
+                });
+
+        return true;
+    }
+
+    private void doFilter(String query) {
+        if (!isFiltered) {
+            mListAll.clear();
+            mListAll.addAll(mList);
+            isFiltered = true;
+        }
+
+        mList.clear();
+        if (query == null || query.isEmpty()) {
+            mList.addAll(mListAll);
+            isFiltered = false;
+        } else {
+            mListMapFilter.clear();
+            for (int i = 0; i < mListAll.size(); i++) {
+                Hotel hotel = mListAll.get(i);
+                if (hotel.judul.toLowerCase().contains(query) ||
+                        hotel.deskripsi.toLowerCase().contains(query) ||
+                        hotel.lokasi.toLowerCase().contains(query)) {
+                    mList.add(hotel);
+                    mListMapFilter.add(i);
+                }
+            }
+        }
+        mAdapter.notifyDataSetChanged();
+    }
+
+
+
+    @Override
     public void doClick(int pos) {
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(HOTEL, mList.get(pos));
@@ -123,6 +185,7 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         itemPos = pos;
         final Hotel hotel = mList.get(pos);
         mList.remove(itemPos);
+        if (isFiltered) mListAll.remove(mListMapFilter.get(itemPos).intValue());
         mAdapter.notifiyDataSetChanged();
         Snackbar.make(findViewById(R.id.fab),hotel.judul+" Terhapus",Snackbar.LENGTH_LONG)
                 .setAction("UNDO", new View.OnClickListener()
@@ -131,6 +194,7 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
                     public void onClick(View v)
                     {
                         mList.add(itemPos, hotel);
+                        if (isFiltered) mListAll.add(mListMapFilter.get(itemPos), hotel);
                         mAdapter.notifyDataSetChanged();
                     }
                 })
