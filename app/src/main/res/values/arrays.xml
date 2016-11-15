@@ -15,74 +15,134 @@
   -->
 <resources>
     <string-array name="places">
-        <item>Palais Garnie</item>
-        <item>Piazza del Duomo</item>
-        <item>Manhattan</item>
-        <item>Senso-ji</item>
-        <item>Sultan Ahmed Mosque</item>
-        <item>Table Mountain</item>
+        <item>Kost eklusif putra/putri dekat kampus UB, ABM, Polinema, ITN, dll</item>
+        <item>Kost karyawan pusat kota malang</item>
+        <item>Kost putri bayar harian bulanan dekat kampus unmuh</item>
+        <item>Kost putri daerah blimbing</item>
+        <item>Kost harian /bulanan</item>
+        <item>Kost putra syariah harian bulanan</item>
+        <item>Harian kos murah lengkap ac, tv, dan air panas</item>
+        <item>Kos alfatih malang wonokoyo</item>
+        <item>Guest house anggrek vanda II</item>
+        <item>Over kontrak kos p</item>
+        <item>Kost pasutri atau single</item>
+        <item>Kost chiluki (wanita)</item>
+        <item>Kost Chiluki (wanita)</item>
+        <item>Kost Kembang Kertas (wanita)</item>
+        <item>Muizza (wanita)</item>
+        <item>Kost Karet 9</item>
+        <item>Kost Puri Bunga Malang</item>
+
     </string-array>
     <string-array name="place_desc">
-        <item>The Palais Garnier which locates in Paris was built from 1861 for
-        the Paris Opera.
-        </item>
-        <item>Piazza del Duomo the cathedral which locates in Florence.</item>
-        <item>Manhattan is the district in New York City</item>
-        <item>Senso-ji is the Shrine locates in Asakusa Tokyo</item>
-        <item>Sultan Ahmed Mosque is mosque locates in Istabul, Turkey</item>
-        <item>Table Mountain is mountain and park locates in Cape Town, South Africa.</item>
+        <item>Jl.candi mendut no 22 (belakang alfamart)</item>
+        <item>Jl. Arif Rahman Hakim IV/129 Depan resto New Hongkong</item>
+        <item>Perum sengkaling indah 1 kav 54</item>
+        <item>Jl.sumpil 1 no 60</item>
+        <item>Daerah terusan wijayakusuma atas</item>
+        <item>Jl.songgoriti malang</item>
+        <item>Simpang Borobudur utara IV / 12</item>
+        <item>Kos alfatih malang wonokoyo</item>
+        <item>Jl anggrek vanda 9D malang jatim</item>
+        <item>Jl.candi II A kelurahan karang besuki kecamatan sukun</item>
+        <item>Jl.plaosan barat 67</item>
+        <item>Jl. Permata Jingga V/34 Blok BB 49, Malang</item>
+        <item>Jl. Rukem 7, Malang</item>
+        <item>Jalan Kembang Kertas No 1 A, Malang</item>
+        <item>Jl. Veteran 2 Kav. 37, Malang</item>
+        <item>Jalan Bunga Karet No. 9 Malang</item>
+        <item>Komp. Puri Bunga Blok B/2 RRI Suhat, malang</item>
+
     </string-array>
     <string-array name="place_details">
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas bangunan : 12 m2. Kamar mandi >10.
+            Fasilitas : AC, Gordyn, garasi, carport, kamar mandi dalam, parkir luas, free wifi, spring bed, lemari
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas : 9m2. Kamar mandi 1
+            Fasilitas : kasur, meja, kursi, lemari, kamar mandi luar, ruang tv, ruang makan, dapur, parkir motor, Kasur springbed single
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas bangunan : 275 m2. Kamar mandi 3
+            Fasilitas : Free listrik, free wifi, mesin cuci, kulkas, dispenser, free aqua, ruang tamu untuk belajar kelompok, ada pembantu bersih2 dan strika
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas : 280m2. kamar mandi 3
+            Fasilitas : 7 kamar, ruang keluarga, tv, dapur dan alat masak, halaman parkir,
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas : 30m2. kamar mandi 5
+            Fasilitas : Kamar mandi, parkiran luas, wifi, kamar mandi dalam, showe air panas
         </item>
-        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+        <item>
+            Luas : 12m2. kamar mandi 3
+            Fasilitas : Kamar mandi, closet duduk, shower, kamar mandi dalam, spring bed, lemari, meja, kursi, kipas angin, dapur, musholla, taman dan kolam ikan, free wifi, tv
+        </item>
+        <item>
+            Luas : 10.2. kamar mandi 1
+            Fasilitas : AC, gratis 50 rb listrik token awal bulan, TV, internet 10mbps, kamar mandi dalam, nasi, air minum, dapur cuci baju, tv cable, kulkas, penjaga 24 jam, cctv
+        </item>
+        <item>
+            Luas : 250 m2. Kamar mandi 6
+            Fasilitas : Garasi, telepon, PAM, wifi, tempat ibadah
+        </item>
+        <item>
+            Luas : 170m2. kamar mandi 3
+            Fasilitas : Carport, garden, stove, dordyn, PAM, Springbed, kamar mandi + heater, kitchen set, ruang tamu dan ruang keluarga
+        </item>
+        <item>
+            Luas : 3m2 kamar mandi 1
+            Fasilitas : Garasi, free air dan listrik, lemari pakaian, Kasur, sprei
+        </item>
+        <item>
+            Ukuran Kamar: 3 x 3 m
+            Fasilitas : Almari, rak buku, bed baru uk 100×200, meja kursi belajar, fan, dsb.
+            Fasilitas Umum : Free Wi-Fi, nasi putih, air putih, dapur bersama, tv bersama
+        </item>
+        <item>
+            Ukuran Kamar: 3 x 3 m. Jumlah Kamar: 10
+            Fasilitas : Almari, rak buku, bed baru uk. 100 x 200, meja + kursi belajar, fan, dsb.
+            Fasilitas Umum : Free Wi-Fi, nasi putih, air putih, dapur bersama, tv bersama, ruang belajar bersama
+        </item>
+        <item>
+            Ukuran Kamar: 4 m x 4 m. Jumlah Kamar: 22
+            Fasilitas : Kamar mandi dalam, Kamar Mandi Luar, Wi-Fi, Tempat Tidur, meja belajar + lemari pakaian, pantry, laundry
+            Fasilitas Umum : Ruang Tamu, dapur, cuci setrika, pembantu, keamanan 24 jam, parkir motor, parkir mobil, TV, Kulkas
+        </item>
+        <item>
+            Ukuran Kamar: 2,5×3 m dan 3×4 m. Jumlah Kamar: 14
+            Fasilitas: Free air putih, nasi putih, WiFi, listrik standard.
+            Fasilitas Umum: Keamanan 24 jam, taman yang indah, parkir yang luas
+        </item>
+        <item>
+            Ukuran Kamar: 3 m x 4.2 m. Jumlah Kamar: 32
+            fasilitas : Kamar mandi dalam, exhaust fan, Wi-Fi, spring bed, meja belajar + lemari pakaian, air panas + shower, pantry, laundry
+            Fasilitas Umum: Ruang tamu, dapur, cuci setrika, pembantu, keamanan 24 jam, parkir motor, parkir mobil
+        </item>
+        <item>
+	Ukuran Kamar: 3×3,5 mJumlah Kamar: >10
+
         </item>
     </string-array>
     <string-array name="place_locations">
-        <item>8 Rue Scribe, 75009 Paris, France</item>
-        <item>Piazza del Capitolo - 50122 Florence</item>
-        <item>New York City</item>
-        <item>2-3-1 Asakusa, Taitō-ku, Tokyo, Japan</item>
-        <item>At Meydanı No:7, 34122 Fatih/İstanbul, Turkey</item>
-        <item>Cape Town, South Africa</item>
+        <item>CP : 08125209262 (Libby Cornelia)</item>
+        <item>CP : 081331512385 (Kisti)</item>
+        <item>CP : 081286384464 (Bu edi)</item>
+        <item>CP : 081234534565 (Maharani)</item>
+        <item>CP : 082116811330 (Ayu Pritandya Pertiwi)</item>
+        <item>CP : 082245453543 (Bebek suroboyo)</item>
+        <item>CP : 0818289435 (Albertus W)</item>
+        <item>CP : 081331661001 (Ali S)</item>
+        <item>CP : 081933843237 (Arifin)</item>
+        <item>CP : 085333543133 (Firman)</item>
+        <item>CP : 081252566997 (Pak Subagyo)</item>
+        <item>CP : 08123581710</item>
+        <item>CP : 08123581710</item>
+        <item>CP : 082142602232</item>
+        <item>CP : 08123581710</item>
+        <item>CP : 082142602232</item>
+        <item>CP : 08161891324, 081298867498</item>
     </string-array>
     <array name="places_picture">
         <item>@drawable/a</item>

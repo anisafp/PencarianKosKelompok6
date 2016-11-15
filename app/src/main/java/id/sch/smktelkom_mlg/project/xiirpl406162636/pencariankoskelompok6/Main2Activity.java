@@ -18,10 +18,12 @@ import java.util.ArrayList;
 import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.adapter.HotelAdapter;
 import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Hotel;
 
-public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHotelAdapter {
+public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHotelAdapter
+{
 
 
     public static final String HOTEL = "hotel";
+    rivate static final int REQUEST_CODE_ADD = 88;
     ArrayList<Hotel> mList = new ArrayList<>();
     HotelAdapter mAdapter;
 
@@ -41,13 +43,31 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         fillData();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                goAdd();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_ADD && resultCode == RESULT_OK)
+        {
+            Hotel hotel = (Hotel) data.getSerializableExtra(HOTEL);
+            mList.add(hotel);
+            mAdapter.notifyDataSetChanged();
+        }
+    }
+
+    private void goAdd()
+    {
+        startActivityForResult(new Intent(this,InputActivity.class), 88)
     }
 
     private void fillData() {
