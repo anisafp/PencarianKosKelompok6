@@ -24,7 +24,8 @@ public class InputActivity extends AppCompatActivity {
     Hotel hotel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
@@ -50,6 +51,24 @@ public class InputActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        hotel = (Hotel) getIntent().getSerializableExtra(MainActivity.HOTEL);
+        if(hotel!=null)
+        {
+            setTitle("Edit "+hotel.judul);
+            fillData();
+        }
+    }
+
+    private void fillData()
+    {
+        etJudul.setText(hotel.judul);
+        etDeskripsi.setText(hotel.deskripsi);
+        etDetail.setText(hotel.detail);
+        etLokasi.setText(hotel.lokasi);
+        uriFoto = Uri.parse(hotel.foto);
+        ivFoto.setImageURI(uriFoto);
+
     }
 
     private void doSave() {
