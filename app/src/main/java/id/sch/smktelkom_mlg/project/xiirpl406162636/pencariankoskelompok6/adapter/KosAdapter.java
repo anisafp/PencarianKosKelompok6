@@ -14,23 +14,23 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.R;
-import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Hotel;
+import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Kos;
 
 /**
  * Created by anis ayu on 11/5/2016.
  */
 
-public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> {
-    ArrayList<Hotel> hotelList;
-    IHotelAdapter mIHotelAdapter;
+public class KosAdapter extends RecyclerView.Adapter<KosAdapter.ViewHolder> {
+    ArrayList<Kos> kosList;
+    IKosAdapter mIKosAdapter;
 
-    public HotelAdapter(Context context, ArrayList<Hotel> hotelList) {
-        this.hotelList = hotelList;
-        mIHotelAdapter = (IHotelAdapter) context;
+    public KosAdapter(Context context, ArrayList<Kos> kosList) {
+        this.kosList = kosList;
+        mIKosAdapter = (IKosAdapter) context;
     }
 
-    public HotelAdapter(ArrayList<Hotel> hotelList) {
-        this.hotelList = hotelList;
+    public KosAdapter(ArrayList<Kos> kosList) {
+        this.kosList = kosList;
     }
 
     @Override
@@ -42,25 +42,21 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Hotel hotel = hotelList.get(position);
-        holder.tvJudul.setText(hotel.judul);
-        holder.tvDeskripsi.setText(hotel.deskripsi);
-        holder.ivFoto.setImageURI(Uri.parse(hotel.foto));
+        Kos kos = kosList.get(position);
+        holder.tvJudul.setText(kos.judul);
+        holder.tvDeskripsi.setText(kos.deskripsi);
+        holder.ivFoto.setImageURI(Uri.parse(kos.foto));
     }
 
     @Override
     public int getItemCount() {
-        if (hotelList != null)
-            return hotelList.size();
+        if (kosList != null)
+            return kosList.size();
         return 0;
     }
 
-    public interface IHotelAdapter {
+    public interface IKosAdapter {
         void doClick(int pos);
-
-        void doEdit(int pos);
-
-        void doDelete(int pos);
 
         void doFav(int pos);
 
@@ -71,8 +67,6 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
         ImageView ivFoto;
         TextView tvJudul;
         TextView tvDeskripsi;
-        Button bEdit;
-        Button bDelete;
         ImageButton ibFav;
         ImageButton ibShare;
 
@@ -81,42 +75,26 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
             ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
             tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
-            bEdit = (Button) itemView.findViewById(R.id.buttonEdit);
-            bDelete = (Button) itemView.findViewById(R.id.buttonDelete);
             ibFav = (ImageButton) itemView.findViewById(R.id.buttonFavorite);
             ibShare = (ImageButton) itemView.findViewById(R.id.buttonShare);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mIHotelAdapter.doClick(getAdapterPosition());
-                }
-            });
-            bEdit.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    mIHotelAdapter.doEdit(getAdapterPosition());
-                }
-            });
-            bDelete.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    mIHotelAdapter.doDelete(getAdapterPosition());
+                    mIKosAdapter.doClick(getAdapterPosition());
                 }
             });
             ibFav.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-                    mIHotelAdapter.doFav(getAdapterPosition());
+                    mIKosAdapter.doFav(getAdapterPosition());
                 }
             });
             ibShare.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-                    mIHotelAdapter.doShare(getAdapterPosition());
+                    mIKosAdapter.doShare(getAdapterPosition());
                 }
             });
         }

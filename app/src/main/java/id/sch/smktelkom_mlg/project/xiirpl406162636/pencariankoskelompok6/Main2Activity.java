@@ -18,18 +18,16 @@ import java.util.ArrayList;
 import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.adapter.HotelAdapter;
 import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Hotel;
 
-public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHotelAdapter
+public class Main2Activity extends AppCompatActivity implements KosAdapter.IKosAdapter
 {
 
 
-    public static final String HOTEL = "hotel";
-    public static final int REQUEST_CODE_EDIT = 99;
-    rivate static final int REQUEST_CODE_ADD = 88;
-    ArrayList<Hotel> mList = new ArrayList<>();
+    public static final String KOS = "kos";
+    ArrayList<Kost> mList = new ArrayList<>();
     boolean isFiltered;
     ArrayList<Integer> mListMapFilter = new ArrayList<>();
     String mQuery;
-    HotelAdapter mAdapter;
+    KosAdapter mAdapter;
     int itemPos;
 
     @Override
@@ -42,48 +40,11 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new HotelAdapter(this, mList);
+        mAdapter = new KosAdapter(this, mList);
         recyclerView.setAdapter(mAdapter);
 
         fillData();
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                goAdd();
-            }
-        });
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_ADD && resultCode == RESULT_OK)
-        {
-            Hotel hotel = (Hotel) data.getSerializableExtra(HOTEL);
-            mList.add(hotel);
-            if (isFiltered) mListAll.add(hotel);
-            doFilter(mQuery);
-            //mAdapter.notifyDataSetChanged();
-        }
-        else if (requestCode == REQUEST_CODE_EDIT && resultCode == RESULT_OK)
-        {
-            Hotel hotel = (Hotel) data.getSerializableExtra(HOTEL);
-            mList.remove(itemPos);
-            if (isFiltered) mListAll.remove(mListMapFilter.get(itemPos).intValue());
-            mList.add(itemPos, hotel);
-            if (isFiltered) mListAll.add(mListMapFilter.get(itemPos), hotel);
-            mAdapter.notifyDataSetChanged();
-        }
-    }
-
-    private void goAdd()
-    {
-        startActivityForResult(new Intent(this,InputActivity.class), REQUEST_CODE_ADD)
     }
 
     private void fillData() {
@@ -103,7 +64,7 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         }
         a.recycle();
         for (int i = 0; i < arJudul.length; i++) {
-            mList.add(new Hotel(arJudul[i], arDeskripsi[i], arDetail[i], arLokasi[i], arFoto[i]));
+            mList.add(new Kos(arJudul[i], arDeskripsi[i], arDetail[i], arLokasi[i], arFoto[i]));
         }
         mAdapter.notifyDataSetChanged();
     }
@@ -149,11 +110,11 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
         } else {
             mListMapFilter.clear();
             for (int i = 0; i < mListAll.size(); i++) {
-                Hotel hotel = mListAll.get(i);
-                if (hotel.judul.toLowerCase().contains(query) ||
-                        hotel.deskripsi.toLowerCase().contains(query) ||
-                        hotel.lokasi.toLowerCase().contains(query)) {
-                    mList.add(hotel);
+                Kos kos = mListAll.get(i);
+                if (kos.judul.toLowerCase().contains(query) ||
+                        kos.deskripsi.toLowerCase().contains(query) ||
+                        kos.lokasi.toLowerCase().contains(query)) {
+                    mList.add(kos);
                     mListMapFilter.add(i);
                 }
             }
@@ -166,39 +127,8 @@ public class Main2Activity extends AppCompatActivity implements HotelAdapter.IHo
     @Override
     public void doClick(int pos) {
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(HOTEL, mList.get(pos));
+        intent.putExtra(KOS, mList.get(pos));
         startActivity(intent);
-    }
-
-    @Override
-    public void doEdit(int pos)
-    {
-        itemPos = pos;
-        Intent intent = new Intent(this, InputActivity.class);
-        intent.putExtra(HOTEL, mList.get(pos));
-        startActivityForResult(intent, REQUEST_CODE_EDIT);
-    }
-
-    @Override
-    public void doDelete(int pos)
-    {
-        itemPos = pos;
-        final Hotel hotel = mList.get(pos);
-        mList.remove(itemPos);
-        if (isFiltered) mListAll.remove(mListMapFilter.get(itemPos).intValue());
-        mAdapter.notifiyDataSetChanged();
-        Snackbar.make(findViewById(R.id.fab),hotel.judul+" Terhapus",Snackbar.LENGTH_LONG)
-                .setAction("UNDO", new View.OnClickListener()
-                {
-                    @Override
-                    public void onClick(View v)
-                    {
-                        mList.add(itemPos, hotel);
-                        if (isFiltered) mListAll.add(mListMapFilter.get(itemPos), hotel);
-                        mAdapter.notifyDataSetChanged();
-                    }
-                })
-                .show();
     }
 
     @Override
