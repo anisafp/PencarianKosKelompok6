@@ -28,10 +28,6 @@
         <item>Kost pasutri atau single</item>
         <item>Kost chiluki (wanita)</item>
         <item>Kost Chiluki (wanita)</item>
-        <item>Kost Kembang Kertas (wanita)</item>
-        <item>Muizza (wanita)</item>
-        <item>Kost Karet 9</item>
-        <item>Kost Puri Bunga Malang</item>
 
     </string-array>
     <string-array name="place_desc">
@@ -48,10 +44,6 @@
         <item>Jl.plaosan barat 67</item>
         <item>Jl. Permata Jingga V/34 Blok BB 49, Malang</item>
         <item>Jl. Rukem 7, Malang</item>
-        <item>Jalan Kembang Kertas No 1 A, Malang</item>
-        <item>Jl. Veteran 2 Kav. 37, Malang</item>
-        <item>Jalan Bunga Karet No. 9 Malang</item>
-        <item>Komp. Puri Bunga Blok B/2 RRI Suhat, malang</item>
 
     </string-array>
     <string-array name="place_details">
@@ -110,21 +102,7 @@
             Fasilitas : Kamar mandi dalam, Kamar Mandi Luar, Wi-Fi, Tempat Tidur, meja belajar + lemari pakaian, pantry, laundry
             Fasilitas Umum : Ruang Tamu, dapur, cuci setrika, pembantu, keamanan 24 jam, parkir motor, parkir mobil, TV, Kulkas
         </item>
-        <item>
-            Ukuran Kamar: 2,5×3 m dan 3×4 m. Jumlah Kamar: 14
-            Fasilitas: Free air putih, nasi putih, WiFi, listrik standard.
-            Fasilitas Umum: Keamanan 24 jam, taman yang indah, parkir yang luas
-        </item>
-        <item>
-            Ukuran Kamar: 3 m x 4.2 m. Jumlah Kamar: 32
-            fasilitas : Kamar mandi dalam, exhaust fan, Wi-Fi, spring bed, meja belajar + lemari pakaian, air panas + shower, pantry, laundry
-            Fasilitas Umum: Ruang tamu, dapur, cuci setrika, pembantu, keamanan 24 jam, parkir motor, parkir mobil
-        </item>
-        <item>
-	Ukuran Kamar: 3×3,5 mJumlah Kamar: >10
-
-        </item>
-    </string-array>
+        </string-array>
     <string-array name="place_locations">
         <item>CP : 08125209262 (Libby Cornelia)</item>
         <item>CP : 081331512385 (Kisti)</item>
@@ -139,17 +117,8 @@
         <item>CP : 081252566997 (Pak Subagyo)</item>
         <item>CP : 08123581710</item>
         <item>CP : 08123581710</item>
-        <item>CP : 082142602232</item>
-        <item>CP : 08123581710</item>
-        <item>CP : 082142602232</item>
-        <item>CP : 08161891324, 081298867498</item>
     </string-array>
     <array name="places_picture">
-        <item>@drawable/a</item>
-        <item>@drawable/b</item>
-        <item>@drawable/c</item>
-        <item>@drawable/d</item>
-        <item>@drawable/e</item>
         <item>@drawable/f</item>
         <item>@drawable/g</item>
         <item>@drawable/h</item>

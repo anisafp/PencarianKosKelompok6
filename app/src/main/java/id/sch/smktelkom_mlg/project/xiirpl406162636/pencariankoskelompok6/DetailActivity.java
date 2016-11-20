@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Hotel;
+import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Kos;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -18,14 +18,14 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Hotel hotel = (Hotel) getIntent().getSerializableExtra(Main2Activity.HOTEL);
-        setTitle(hotel.judul);
+        Kos kos = (Kos) getIntent().getSerializableExtra(Main2Activity.KOS);
+        setTitle(kos.judul);
         ImageView ivFoto = (ImageView) findViewById(R.id.imageFoto);
-        ivFoto.setImageURI(Uri.parse(hotel.foto));
+        ivFoto.setImageURI(Uri.parse(kos.foto));
         TextView tvDeskripsi = (TextView) findViewById(R.id.place_detail);
-        tvDeskripsi.setText(hotel.deskripsi + "\n\n" + hotel.detail);
+        tvDeskripsi.setText(kos.deskripsi + "\n\n" + kos.detail);
         TextView tvLokasi = (TextView) findViewById(R.id.place_location);
-        tvLokasi.setText(hotel.lokasi);
+        tvLokasi.setText(kos.lokasi);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

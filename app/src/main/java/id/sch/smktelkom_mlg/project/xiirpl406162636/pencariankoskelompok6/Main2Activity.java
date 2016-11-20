@@ -5,25 +5,27 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.adapter.HotelAdapter;
-import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Hotel;
+import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.adapter.KosAdapter;
+import id.sch.smktelkom_mlg.project.xiirpl406162636.pencariankoskelompok6.model.Kos;
 
 public class Main2Activity extends AppCompatActivity implements KosAdapter.IKosAdapter
 {
 
 
     public static final String KOS = "kos";
-    ArrayList<Kost> mList = new ArrayList<>();
+    ArrayList<Kos> mList = new ArrayList<>();
+    ArrayList<Kos> mListAll = new ArrayList<>();
     boolean isFiltered;
     ArrayList<Integer> mListMapFilter = new ArrayList<>();
     String mQuery;
@@ -45,7 +47,7 @@ public class Main2Activity extends AppCompatActivity implements KosAdapter.IKosA
 
         fillData();
     }
-    }
+
 
     private void fillData() {
         Resources resources = getResources();
@@ -97,6 +99,7 @@ public class Main2Activity extends AppCompatActivity implements KosAdapter.IKosA
     }
 
     private void doFilter(String query) {
+
         if (!isFiltered) {
             mListAll.clear();
             mListAll.addAll(mList);
