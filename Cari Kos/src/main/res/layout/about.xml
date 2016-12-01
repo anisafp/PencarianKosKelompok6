@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="145dp"
+            android:text="         CariKos merupakan aplikasi yang menyajikan informasi kamar kosan, lengkap dengan fasilitas kost, harga kost, dan dekorasi kamar beserta foto desain kamar yang disesuaikan dengan kondisi sebenarnya. Informasi ketersediaan kamar kost dan harga kostupdate max setiap 2 minggu sekali untuk memastikan info kost kami bermanfaat untuk anak kost. Data Kamar kosan yang dimiliki aplikasi ini masih mencakup kost di area Malang. Pengembangan data kosan masih terus kami usahakan.
+
+  Aplikasi ini menyediakan fitur cari kos di sekitar area Malang Kota dan filter pencarian tipe kost (harga termurah sampai harga termahal, kost putra/kost putri, area di Malang)
+  Informasi yang dapat dilihat di CariKos yaitu alamat rumah kost yang falid, foto-foto lengkap fasilitas kosan dan desain kamar kost, harga kost, filter pencarian kost untuk membantumu menemukan kosan idamanmu, penambahan fitur clustering atau pengelompokan kost untuk mempermudah pencarian dan mempercepat loading" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+</LinearLayout>
